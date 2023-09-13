@@ -41,7 +41,7 @@ class block_course_activities extends block_list {
         $this->content->footer = '';
         $course = $this->page->course;
         require_once($CFG->dirroot.'/course/lib.php');
-        $modinfo = get_fast_modinfo($course);
+        
         $completioninfo = new completion_info($course);
         $activities = $completioninfo->get_activities();
         foreach ($activities as $cm) {
